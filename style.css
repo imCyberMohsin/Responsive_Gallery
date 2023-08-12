@@ -1,13 +1,90 @@
 /*? CSS - Responsive Gallery  */
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
-body{
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2% 2% 0 2%;
+}
+
+.container .heading {
+    width: 60%;
+    padding-bottom: 4%;
+}
+
+.container .heading h3 {
+    font-size: 3vw;
+    font-weight: 600;
+    border-bottom: 3px solid black;
+    padding-bottom: 1%;
+}
+
+.container .heading h3 span {
+    font-weight: 200;
+}
+
+.container .gallery-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 3%;
+    border-bottom: 3px solid black;
+}
+
+.container .gallery-box .row-1 {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.container .gallery-box .row-1 img {
     width: 100%;
-    height: 100vh;
+    /* padding-bottom: 3.5%; */
+    margin-bottom: 3.5%;
+    transition: all 0.2s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    cursor:pointer;
 }
 
+.container .gallery-box .row-1 img:hover {
+    transform: scale(1.02);
+    box-shadow: none;
+}
+
+.container .btn {
+    margin: 3% 0 5% 0;
+    background-color: black;
+    padding: 1.2% 3%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .btn a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/*? Media Query for Gallery  */
+@media only screen and (max-width: 768px) {
+    .container .gallery-box {
+        flex-direction: column;
+    }
+
+    .container .gallery-box .row-1 {
+        width: 100%;
+    }
+}
