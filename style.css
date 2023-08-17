@@ -64,19 +64,34 @@
 }
 
 .container .btn {
-    margin: 3% 0 5% 0;
+    margin: 0% 0 2% 0;
     background-color: black;
-    padding: 1.2% 3%;
-    border-radius: 5px;
+    width: 15vw;
+    height: 7vh;
+    border-radius: 25px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+.container .btn:hover{
+    background-color: crimson;
+    color: white;
 }
 
-.container .btn a {
+.container .btn .seeMoreBtn {
+    width: 15vw;
+    padding: 5% 0;
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    letter-spacing: 2px;
+}
+.line{
+    background:black;
+    margin-bottom: 2%;
+    width: 100%;
 }
 
 /* Image Popup onclick */
